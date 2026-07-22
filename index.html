@@ -1,0 +1,28 @@
+<!doctype html>
+<!-- Bu dosya, tarayıcının açtığı temel HTML kabuğudur; React uygulaması aşağıdaki root alanına bağlanır. -->
+<!-- Amaç, uygulamanın başlık, ikon, ekran ölçeği ve başlangıç JavaScript dosyası gibi temel bilgilerini tanımlamaktır. -->
+<!-- OKUMA REHBERİ: <etiket> bir HTML öğesini açar, </etiket> aynı öğeyi kapatır. -->
+<!-- Etiket içindeki lang, charset, href, id, type ve src gibi adlar öğeye bilgi veren attribute alanlarıdır. -->
+<!-- Sonunda /> bulunan meta ve link etiketleri içerik taşımadıkları için kendi kendini kapatır. -->
+<!-- İç içe girinti, bir etiketin hangi üst etiketin içinde bulunduğunu görmeyi kolaylaştırır. -->
+<!-- Tarayıcı önce bu iskeleti oluşturur, ardından module script üzerinden React kodunu çalıştırır. -->
+<html lang="en">
+  <!-- head bölümü, sayfanın görünmeyen tarayıcı ve belge ayarlarını içerir. -->
+  <head>
+    <!-- Türkçe karakterler dahil metinlerin UTF-8 olarak doğru gösterilmesini sağlar. -->
+    <meta charset="UTF-8" />
+    <!-- Tarayıcı sekmesinde gösterilecek SVG favicon dosyasını tanımlar. -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Sayfanın farklı ekran genişliklerinde cihaz genişliğine göre ölçeklenmesini sağlar. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tarayıcı sekmesinde görünen uygulama adını belirler. -->
+    <title>f1dashboard</title>
+  </head>
+  <!-- body bölümü, kullanıcının ekranda göreceği uygulama kökünü ve başlangıç betiğini içerir. -->
+  <body>
+    <!-- React, oluşturduğu bütün dashboard bileşenlerini bu boş root alanının içine yerleştirir. -->
+    <div id="root"></div>
+    <!-- Vite'a uygulamanın başlangıç modülünün src/main.jsx olduğunu bildirir. -->
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

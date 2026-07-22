@@ -1,0 +1,12 @@
+# Bu dosya, gerçek CAN verisini okuyup WebSocket ile frontend'e gönderecek Python sunucusunun bağımlılıklarını tanımlar.
+# Amaç, Raspberry Pi veya geliştirme ortamında gerekli paketlerin `python -m pip install -r requirements.txt` komutuyla kurulabilmesini sağlamaktır.
+# Alt sınırlar tasarımda kullanılacak güncel API'leri garanti eder; üst sınırlar yeni ana sürümlerdeki olası uyumsuzlukları önler.
+
+# python-can, Linux SocketCAN üzerindeki can0 arayüzünden ham CAN mesajlarını okumak için kullanılacaktır.
+python-can>=4.6,<5
+
+# cantools, Ecumaster DBC dosyasını yükleyip ham CAN mesajlarını RPM ve sıcaklık gibi sinyallere çevirecektir.
+cantools>=41,<42
+
+# websockets, vehicleData JSON verisini React dashboard'a 3001 portu üzerinden gönderen asyncio sunucusunu sağlayacaktır.
+websockets>=15,<17

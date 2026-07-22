@@ -1,0 +1,38 @@
+/* Bu dosya, dashboard uygulamasının tüm sayfayı kaplaması için gereken genel tarayıcı stillerini tanımlar. */
+/* Amaç, varsayılan boşlukları kaldırmak ve React kök alanını kaydırma olmadan tam ekrana yaymaktır. */
+/* OKUMA REHBERİ: CSS'te seçici { özellik: değer; } biçimi kullanılır. */
+/* *, html, body ve #root seçicilerdir; # işareti id alanına göre seçim yapar. */
+/* Süslü parantezler bir seçiciye ait kuralları toplar, noktalı virgül tek bir kuralı bitirir. */
+/* px sabit pikseli, % üst öğeye göre oranı, vw/vh ise ekran genişliği/yüksekliği oranını belirtir. */
+/* CSS'te kebab-case olan background-color, JavaScript stil nesnesinde backgroundColor biçiminde yazılır. */
+
+/* Yıldız seçici, sayfadaki istisnasız bütün HTML öğelerine ortak kutu modelini uygular. */
+* {
+  box-sizing: border-box; /* Tüm elementlerde padding ve border ölçüye dahil edilsin. */
+}
+
+/* html seçici, tarayıcı belgesinin en dış katmanını tam ekran olacak şekilde hazırlar. */
+html {
+  margin: 0; /* Tarayıcının varsayılan dış boşluğunu sıfırlarız. */
+  padding: 0; /* Tarayıcının varsayılan iç boşluğunu sıfırlarız. */
+  width: 100%; /* HTML alanı ekran genişliğini tamamen kaplasın. */
+  height: 100%; /* HTML alanı ekran yüksekliğini tamamen kaplasın. */
+  background-color: #000000; /* Sayfanın temel arka planı siyah olsun. */
+}
+
+/* body seçici, React uygulamasını taşıyan görünür belge gövdesinin varsayılan davranışlarını düzenler. */
+body {
+  margin: 0; /* Body'nin varsayılan 8px boşluğunu kaldırıyoruz. */
+  padding: 0; /* Body içinde ekstra boşluk olmasın. */
+  width: 100%; /* Body ekran genişliğini tamamen kaplasın. */
+  height: 100%; /* Body ekran yüksekliğini tamamen kaplasın. */
+  overflow: hidden; /* Dashboard ekranında scroll oluşmasını engelliyoruz. */
+  background-color: #000000; /* Body arka planı siyah olsun. */
+}
+
+/* root seçici, main.jsx tarafından oluşturulan React bileşen ağacının yerleşeceği alanı biçimlendirir. */
+#root {
+  width: 100vw; /* React uygulamasının kök alanı ekran genişliğini kaplasın. */
+  height: 100vh; /* React uygulamasının kök alanı ekran yüksekliğini kaplasın. */
+  background-color: #000000; /* React kök alanı da siyah olsun. */
+}

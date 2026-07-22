@@ -1,0 +1,52 @@
+# Bu dosya, Git deposuna eklenmemesi gereken geçici, yerel ve otomatik üretilen dosyaları tanımlar.
+# Amaç; bağımlılıkların, derleme çıktılarının ve editör ayarlarının proje geçmişini gereksiz yere doldurmasını önlemektir.
+# OKUMA REHBERİ:
+# Bu dosyada JavaScript çalışmaz; her yorum dışındaki satır Git'e bir dosya eşleştirme kuralı verir.
+# Düz bir ad aynı isimli dosya veya klasörü, * işareti herhangi bir karakter dizisini temsil eder.
+# Satır başındaki ! işareti, daha önce yok sayılan bir dosyayı yeniden Git kapsamına alır.
+# Nokta ile başlayan adlar genellikle işletim sistemi veya editörlerin gizli ayar dosyalarıdır.
+
+# Logs
+# Uygulama çalışırken oluşturulan logs klasörünün Git'e eklenmesini önler.
+logs
+# Uzantısı .log olan bütün çalışma kayıtlarını kapsam dışında bırakır.
+*.log
+# npm hata ayıklama kayıtlarının farklı numaralı sürümlerini yok sayar.
+npm-debug.log*
+# Yarn hata ayıklama kayıtlarını depo dışında tutar.
+yarn-debug.log*
+# Yarn hata kayıtlarını depo dışında tutar.
+yarn-error.log*
+# pnpm hata ayıklama kayıtlarını depo dışında tutar.
+pnpm-debug.log*
+# Lerna tarafından üretilen hata ayıklama kayıtlarını yok sayar.
+lerna-debug.log*
+
+# npm tarafından indirilen bağımlılık klasörünü Git geçmişine eklemez.
+node_modules
+# Vite'ın üretim derlemesi sırasında oluşturduğu çıktı klasörünü yok sayar.
+dist
+# Sunucu tarafında render edilen olası derleme çıktılarını yok sayar.
+dist-ssr
+# Geliştirici bilgisayarına özel .local uzantılı dosyaları depo dışında tutar.
+*.local
+
+# Editor directories and files
+# VS Code klasöründeki kişisel editör ayarlarının tamamını yok sayar.
+.vscode/*
+# Ekip için yararlı eklenti önerileri dosyasını önceki kuralın dışında bırakır.
+!.vscode/extensions.json
+# JetBrains IDE'lerinin oluşturduğu proje ayarlarını yok sayar.
+.idea
+# macOS Finder tarafından oluşturulan görünüm bilgisi dosyasını yok sayar.
+.DS_Store
+# Visual Studio kullanıcı seçenekleri dosyalarını yok sayar.
+*.suo
+# Node.js Tools for Visual Studio tarafından oluşturulan geçici dosyaları yok sayar.
+*.ntvs*
+# Visual Studio Node.js proje dosyalarını yok sayar.
+*.njsproj
+# Visual Studio çözüm dosyalarını yok sayar.
+*.sln
+# Vim ve benzeri editörlerin oluşturduğu takas dosyalarını yok sayar.
+*.sw?
