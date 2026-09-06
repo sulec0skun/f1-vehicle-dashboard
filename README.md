@@ -4,6 +4,10 @@ A real-time dashboard interface developed for the DU Racing Team's Formula Stude
 
 The dashboard is designed to run on a Raspberry Pi 5 and visualize critical vehicle data such as RPM, speed, gear, and sensor information.
 
+## 🖥️ Dashboard Preview
+
+![Formula Student Dashboard](assets/dashboard-preview.png)
+
 ## Features
 
 - Real-time RPM visualization
